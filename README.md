@@ -2,7 +2,7 @@
 
 ![Prombench Design](design.svg)
 
-It runs with [Prow CI](https://github.com/kubernetes/test-infra/blob/master/prow/) on a [Google Kubernetes Engine Cluster](https://cloud.google.com/kubernetes-engine/).
+It runs with [Prow CI](https://github.com/prometheus/test-infra/blob/master/prow/) on a [Google Kubernetes Engine Cluster](https://cloud.google.com/kubernetes-engine/).
 It is designed to support adding more k8s providers.
 
 ## How to trigger tests on Github
@@ -17,7 +17,7 @@ To cancel benchmarking, a mantainer should comment `/benchmark cancel`.
 - Create a new Google cloud project - `prometheus-ci`
 - Create a [Service Account](https://cloud.google.com/kubernetes-engine/docs/tutorials/authenticating-to-cloud-platform#step_3_create_service_account_credentials) on GKE with role `Kubernetes Engine Service Agent & Kubernetes Engine Admin` and download the json file.
 - Generate a github auth token that will be used to authenticate when sending requests to the github api.
-  * Login with the [Prombot account](https://github.com/prombot) and generate a [new auth token](https://github.com/settings/tokens).  
+  * Login with the [Prombot account](https://github.com/prombot) and generate a [new auth token](https://github.com/settings/tokens).
   permissions:*public_repo, read:org, write:discussion*.
 
 - Set some env variable which will be used in the commands below.
